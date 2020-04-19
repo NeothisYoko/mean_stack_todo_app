@@ -1,0 +1,14 @@
+<div class="task-list">
+    <div class="row" *ngFor="let task of taskList; index as i">
+        <div class="col-md-1">
+            <input type="checkbox" [(ngModel)]="task.isDone" (change)="updateStatus(task)">
+        </div>
+        <div class="col-md-7">
+            {{task.title}}
+        </div>
+        <div class="col-md-4">
+            <input type="button" value="Delete" class="btn btn-danger" (click)="deleteTask(task,i)">
+        </div>
+    </div>
+
+</div>

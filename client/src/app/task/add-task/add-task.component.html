@@ -1,0 +1,5 @@
+<form class="well" #formElement="ngForm" (submit)="formElement.form.valid && createTask()">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Add Task" name="titleTask" [(ngModel)]="task.title" required>
+    </div>
+</form>
